@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QBR Automation - Sales AI Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #e2e8f0; padding: 12px; text-align: left; vertical-align: top; }
+        th { background-color: #f1f5f9; font-weight: 600; }
+        .tag-container { margin: 20px 0; display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { display: inline-block; padding: 4px 12px; border-radius: 9999px; font-size: 0.9em; font-weight: 500; }
+        .tag-indigo { background-color: #e0e7ff; color: #3730a3; }
+        code { background-color: #f1f5f9; color: #475569; padding: 3px 6px; border-radius: 4px; font-family: "Courier New", Courier, monospace; }
+        pre { background-color: #1e293b; color: #f8fafc; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 12px 0; }
+        .solution-h2 { font-size: 1.5rem; line-height: 2rem; }
+        .solution-h3 { font-size: 1.25rem; line-height: 1.75rem; }
+        .solution-h2, .solution-h3 { font-weight: 600; }
+        .solution-hr { margin: 32px 0; border-top: 1px solid #e2e8f0; }
+    </style>
+</head>
+<body class="text-slate-800">
+    <div id="app" class="container mx-auto px-4 py-12 max-w-6xl">
+        <div class="bg-white shadow-sm border border-slate-200 rounded-lg p-6 md:p-10">
+            <p class="mb-4 text-sm text-slate-500">
+                <a href="index.html" class="text-indigo-600 hover:underline">Home</a> &gt; 
+                <a href="category-2.html" class="text-indigo-600 hover:underline">Phase 2: Workflow Automation</a>
+            </p>
+            <main>
+                <h1 class="text-3xl font-bold text-slate-800">How to Automate QBR (Quarterly Business Review) Creation</h1>
+                <table>
+                    <tr><th>The Problem</th><th>The AI Solution</th></tr>
+                    <tr>
+                        <td>Manually pulling data from Tableau and Sheets to build QBR slides is a high-effort, manual task that takes hours.</td>
+                        <td>Use Gemini in Google Docs to summarize raw data and extract insights. Then, use Gemini in Google Slides to automatically generate the presentation.</td>
+                    </tr>
+                </table>
+                <div class="tag-container">
+                    <span class="tag tag-indigo"><strong>Primary Roles:</strong> Account Managers, Account Directors</span>
+                    <span class="tag tag-indigo"><strong>Tools:</strong> Gemini in Slides, Gemini in Docs</span>
+                    <span class="tag tag-indigo"><strong>Difficulty / Phase:</strong> Phase 2: Workflow Automation</span>
+                </div>
+                <hr class="solution-hr">
+                <h2 class="text-2xl mb-4 solution-h2">Step-by-Step Training Workflow</h2>
+                <h3 class="text-xl mb-3 solution-h3">Step 1: Create Your "QBR Data Hub"</h3>
+                <p class="mb-4">Create a new Google Doc named <strong>"[Merchant Name] QBR Data - [Quarter]"</strong>. Copy and paste all your raw exported data (tables, charts, notes) into this single doc.</p>
+                <h3 class="text-xl mt-6 mb-3 solution-h3">Step 2: Use Gemini in Docs to Find the Story</h3>
+                <p class="mb-4">In your Google Doc, open the <strong>Gemini Sidebar</strong> (✨ icon) and give it this prompt:</p>
+                <pre><code>Act as a senior Account Director. Based *only* on the data in this document:
+1.  Write a 3-paragraph executive summary for the "Key Takeaways" slide.
+2.  Identify the 3 biggest "Performance Wins" (with data points).
+3.  Identify 2 "Risks or Opportunities" (with data points).
+4.  Suggest one "Data-Backed Recommendation" for next quarter.
+Format the output clearly with headings.</code></pre>
+                <h3 class="text-xl mt-6 mb-3 solution-h3">Step 3: Generate the Slide Deck Automatically</h3>
+                <p class="mb-4">Open a new, blank Google Slides presentation. Open the <strong>Gemini Sidebar</strong> (✨ icon) and use an "@" prompt to reference your doc.</p>
+                <pre><code>Create a 7-slide QBR presentation for [Merchant Name] based on my Google Doc named "@[Merchant Name] QBR Data - [Quarter]".
 
+* Slide 1: Title slide
+* Slide 2: The Executive Summary
+* Slide 3: Performance Win 1
+* ...etc.
+* Slide 7: Recommendations & Next Steps</code></pre>
+                <hr class="solution-hr">
+                <h3 class="text-xl mb-3 solution-h3">Pro-Tip: Use NotebookLM for Deeper Insights</h3>
+                <p class="mb-4">For Tier A merchants, create a <strong>NotebookLM</strong> project. Upload <code>Past QBRs</code>, <code>Current IOs</code>, and your new <code>QBR Data Hub</code> doc. Then ask deeper questions.</p>
+                <pre><code>Comparing the current data doc to the QBR from last quarter, what is the biggest change in performance?</code></pre>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
