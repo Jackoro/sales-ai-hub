@@ -1,1 +1,68 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduled Ad Reporting - Sales AI Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #e2e8f0; padding: 12px; text-align: left; vertical-align: top; }
+        th { background-color: #f1f5f9; font-weight: 600; }
+        .tag-container { margin: 20px 0; display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { display: inline-block; padding: 4px 12px; border-radius: 9999px; font-size: 0.9em; font-weight: 500; }
+        .tag-indigo { background-color: #e0e7ff; color: #3730a3; }
+        code { background-color: #f1f5f9; color: #475569; padding: 3px 6px; border-radius: 4px; font-family: "Courier New", Courier, monospace; }
+        pre { background-color: #1e293b; color: #f8fafc; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 12px 0; }
+        .solution-h2 { font-size: 1.5rem; line-height: 2rem; }
+        .solution-h3 { font-size: 1.25rem; line-height: 1.75rem; }
+        .solution-h2, .solution-h3 { font-weight: 600; }
+        .solution-hr { margin: 32px 0; border-top: 1px solid #e2e8f0; }
+    </style>
+</head>
+<body class="text-slate-800">
+    <div id="app" class="container mx-auto px-4 py-12 max-w-6xl">
+        <div class="bg-white shadow-sm border border-slate-200 rounded-lg p-6 md:p-10">
+            <p class="mb-4 text-sm text-slate-500">
+                <a href="index.html" class="text-indigo-600 hover:underline">Home</a> &gt; 
+                <a href="category-2.html" class="text-indigo-600 hover:underline">Phase 2: Workflow Automation</a>
+            </p>
+            <main>
+                <h1 class="text-3xl font-bold text-slate-800">How to Automate Scheduled Ad Reporting</h1>
+                <table>
+                    <tr><th>The Problem</th><th>The AI Solution</th></tr>
+                    <tr>
+                        <td>Manually downloading sheets from Tableau, deleting columns, and copy-pasting into Google Sheets every morning is a high-effort, repetitive task.</td>
+                        <td>Use Gemini in Google Sheets to automate the cleaning, formatting, and analysis. A single prompt can replace all the manual deletion and color-coding.</td>
+                    </tr>
+                </table>
+                <div class="tag-container">
+                    <span class="tag tag-indigo"><strong>Primary Roles:</strong> Media Planners</span>
+                    <span class="tag tag-indigo"><strong>Tools:</strong> Gemini in Sheets, Google Sheets</span>
+                    <span class="tag tag-indigo"><strong>Difficulty / Phase:</strong> Phase 2: Workflow Automation</span>
+                </div>
+                <hr class="solution-hr">
+                <h2 class="text-2xl mb-4 solution-h2">Step-by-Step Training Workflow</h2>
+                <h3 class="text-xl mb-3 solution-h3">Step 1: Paste Your Raw Data</h3>
+                <p class="mb-4">Create a Google Sheet with two tabs: <code>Raw Data</code> and <code>Clean Report</code>. Copy and paste the *entire* uncleaned dataset from Tableau into the <code>Raw Data</code> tab.</p>
+                <h3 class="text-xl mt-6 mb-3 solution-h3">Step 2: Use Gemini to Clean and Format</h3>
+                <p class="mb-4">Go to your <code>Clean Report</code> tab. In cell <code>A1</code>, write a prompt to do all the work:</p>
+                <pre><code>=GEMINI("Read the 'Raw Data' tab. 
+1.  Keep only these columns: [Column A Name], [Column C Name], [Column F Name].
+2.  Delete all other columns.
+3.  Create a new column called 'Status'.
+4.  If [Column C Name] is 'Completed', set Status to 'Done'.
+5.  If [Column F Name] is blank, set Status to 'Assets Needed'.
+6.  Otherwise, set Status to 'In Progress'.")</code></pre>
+                <h3 class="text-xl mt-6 mb-3 solution-h3">Step 3: Use the Sidebar for Quick Checks</h3>
+                <p class="mb-4">After the report is generated, open the <strong>Gemini Sidebar</strong> (✨ icon) and highlight the new table.</p>
+                <pre><code>Based on the selected data:
+- How many ads have a status of 'Assets Needed'?
+- Which merchant has the most ads 'In Progress'?</code></pre>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
