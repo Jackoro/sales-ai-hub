@@ -1,1 +1,74 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Asset Creation - Sales AI Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #e2e8f0; padding: 12px; text-align: left; vertical-align: top; }
+        th { background-color: #f1f5f9; font-weight: 600; }
+        .tag-container { margin: 20px 0; display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { display: inline-block; padding: 4px 12px; border-radius: 9999px; font-size: 0.9em; font-weight: 500; }
+        .tag-purple { background-color: #f3e8ff; color: #581c87; }
+        code { background-color: #f1f5f9; color: #475569; padding: 3px 6px; border-radius: 4px; font-family: "Courier New", Courier, monospace; }
+        pre { background-color: #1e293b; color: #f8fafc; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 12px 0; }
+        .solution-h2 { font-size: 1.5rem; line-height: 2rem; }
+        .solution-h3 { font-size: 1.25rem; line-height: 1.75rem; }
+        .solution-h2, .solution-h3 { font-weight: 600; }
+        .solution-hr { margin: 32px 0; border-top: 1px solid #e2e8f0; }
+    </style>
+</head>
+<body class="text-slate-800">
+    <div id="app" class="container mx-auto px-4 py-12 max-w-6xl">
+        <div class="bg-white shadow-sm border border-slate-200 rounded-lg p-6 md:p-10">
+            <p class="mb-4 text-sm text-slate-500">
+                <a href="index.html" class="text-indigo-600 hover:underline">Home</a> &gt; 
+                <a href="category-3.html" class="text-indigo-600 hover:underline">Phase 3: Advanced AI</a>
+            </p>
+            <main>
+                <h1 class="text-3xl font-bold text-slate-800">How to Create & Resize Ad Banners with AI</h1>
+                <table>
+                    <tr><th>The Problem</th><th>The AI Solution</th></tr>
+                    <tr>
+                        <td>Manually creating and resizing banners in Figma or Pixlr is a high-effort, long-winded bottleneck for Media Planners.</td>
+                        <td>Use Gemini Advanced's image generation to create professional ad banners from a text prompt and ask for instant resizes.</td>
+                    </tr>
+                </table>
+                <div class="tag-container">
+                    <span class="tag tag-purple"><strong>Primary Roles:</strong> Media Planners, Commercial Ops</span>
+                    <span class="tag tag-purple"><strong>Tools:</strong> Gemini Advanced (standalone)</span>
+                    <span class="tag tag-purple"><strong>Difficulty / Phase:</strong> Phase 3: Advanced AI</span>
+                </div>
+                <hr class="solution-hr">
+                <h2 class="text-2xl mb-4 solution-h2">Step-by-Step Training Workflow</h2>
+                <h3 class="text-xl mb-3 solution-h3">Step 1: Open Gemini Advanced</h3>
+                <p class="mb-4">Go to the standalone Gemini web interface (<code>gemini.google.com</code>) that has image generation capabilities.</p>
+                <h3 class="text-xl mt-6 mb-3 solution-h3">Step 2: Write a "Creative Brief" Prompt</h3>
+                <p class="mb-4">Be specific, like you're briefing a designer.</p>
+                <pre><code>Create an ad banner for [Merchant Name]'s "Summer Sale".
+-   The banner should be 728x90 (leaderboard).
+-   Use bright summer colors (yellows, oranges, light blues).
+-   Include the text "Summer Sale" (large) and "Up to 50% Off" (smaller).
+-   The style should be modern, clean, and photographic.
+-   Generate 4 different options.</code></pre>
+                <h3 class="text-xl mt-6 mb-3 solution-h3">Step 3: Iterate and Resize Instantly</h3>
+                <p class="mb-4">Refine the generated images and resize them instantly.</p>
+                <p><strong>Iteration:</strong></p>
+                <pre><code>I like option 3. 
+Can you make the blue text a bit darker so it's easier to read?</code></pre>
+                <p class="mt-4"><strong>Instant Resizing:</strong></p>
+                <pre><code>That's perfect. Now, take that exact design and resize it to:
+-   300x250 (Medium Rectangle)
+-   160x600 (Skyscraper)
+-   320x50 (Mobile Banner)</code></pre>
+                <h3 class="text-xl mt-6 mb-3 solution-h3">Step 4: Handle "In-Image" Text</h3>
+                <p class="mb-4">If the AI struggles with text, ask it to leave a blank space where the text should go, and you can add it manually in Figma. This still saves 90% of the work.</p>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
