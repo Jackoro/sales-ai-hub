@@ -1,1 +1,78 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Alerts - Sales AI Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #e2e8f0; padding: 12px; text-align: left; vertical-align: top; }
+        th { background-color: #f1f5f9; font-weight: 600; }
+        .tag-container { margin: 20px 0; display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag { display: inline-block; padding: 4px 12px; border-radius: 9999px; font-size: 0.9em; font-weight: 500; }
+        .tag-blue { background-color: #dbeafe; color: #1d4ed8; }
+        code { background-color: #f1f5f9; color: #475569; padding: 3px 6px; border-radius: 4px; font-family: "Courier New", Courier, monospace; }
+        pre { background-color: #1e293b; color: #f8fafc; padding: 16px; border-radius: 8px; overflow-x: auto; margin: 12px 0; }
+        .solution-h2 { font-size: 1.5rem; line-height: 2rem; }
+        .solution-h3 { font-size: 1.25rem; line-height: 1.75rem; }
+        .solution-h2, .solution-h3 { font-weight: 600; }
+        .solution-hr { margin: 32px 0; border-top: 1px solid #e2e8f0; }
+    </style>
+</head>
+<body class="text-slate-800">
+    <div id="app" class="container mx-auto px-4 py-12 max-w-6xl">
+        <div class="bg-white shadow-sm border border-slate-200 rounded-lg p-6 md:p-10">
+            <p class="mb-4 text-sm text-slate-500">
+                <a href="index.html" class="text-indigo-600 hover:underline">Home</a> &gt; 
+                <a href="category-1.html" class="text-indigo-600 hover:underline">Phase 1: Quick Wins</a>
+            </p>
+            <main>
+                <h1 class="text-3xl font-bold text-slate-800">How to Automatically Detect & Flag Performance Anomalies</h1>
+                <table>
+                    <tr><th>The Problem</th><th>The AI Solution</th></tr>
+                    <tr>
+                        <td>Manually checking Tableau dashboards to find performance drops (low CVR, CTR) is time-consuming, reactive, and often too late.</td>
+                        <td>Use Gemini in Google Sheets as a 24/7 data analyst. It can automatically scan data, flag anomalies, and even suggest the likely cause.</td>
+                    </tr>
+                </table>
+                <div class="tag-container">
+                    <span class="tag tag-blue"><strong>Primary Roles:</strong> Account Managers, Marketing Solutions</span>
+                    <span class="tag tag-blue"><strong>Tools:</strong> Gemini in Sheets, Google Sheets</span>
+                    <span class="tag tag-blue"><strong>Difficulty / Phase:</strong> Phase 1: Quick Wins</span>
+                </div>
+                <hr class="solution-hr">
+                <h2 class="text-2xl mb-4 solution-h2">Step-by-Step Training Workflow</h2>
+                <h3 class="text-xl mb-3 solution-h3">Step 1: Set Up Your "Performance Data" Sheet</h3>
+                <ol class="list-decimal list-inside space-y-2 mb-4 pl-4">
+                    <li>Create a Google Sheet named "Daily Performance Monitor."</li>
+                    <li>Automate your daily Tableau/network data export into this sheet.</li>
+                    <li>Keep headers simple: <code>Date</code>, <code>Merchant Name</code>, <code>CVR</code>, <code>Transactions</code>, <code>CTR</code>, <code>Notes</code>.</li>
+                </ol>
+                <h3 class="text-xl mt-6 mb-3 solution-h3">Step 2: Use Gemini to Find Anomalies (The Easy Way)</h3>
+                <p class="mb-4">In your Google Sheet, open the <strong>Gemini Sidebar</strong> (✨ icon), highlight your data, and ask a prompt.</p>
+                <pre><code>Act as a data analyst. Based on the data in this sheet:
+1.  Identify any merchants where 'CVR' dropped by >20% vs. their 7-day average.
+2.  List merchants with 'Transactions' below 10 for two consecutive days.
+3.  Are there any tracking issues (high CTR but zero CVR)?
+Provide a simple, bulleted list.</code></pre>
+                <h3 class="text-xl mt-6 mb-3 solution-h3">Step 3: Create an "AI Analyst" Column (The Automated Way)</h3>
+                <p class="mb-4">In a new column <code>AI_Flag</code>, use a Gemini formula in the cell (e.g., <code>G2</code>).</p>
+                <pre><code>=GEMINI("Is the data in this row a performance anomaly? 
+Look at cells B2-F2. 
+A 'Yes' is triggered if CVR (column D) is below 0.5% AND Transactions (column E) are above 0. 
+Answer only 'Yes' or 'No'.")</code></pre>
+                <p class="mt-4">Drag this formula down the column and use "Conditional Formatting" to turn "Yes" cells red.</p>
+                <hr class="solution-hr">
+                <h3 class="text-xl mb-3 solution-h3">Pro-Tip: Use NotebookLM for Deeper Investigation</h3>
+                <p class="mb-4">When a problem is flagged, use <strong>NotebookLM</strong>. Upload your "Daily Performance Monitor" sheet and the "Promo Planner" doc as sources.</p>
+                <pre><code>Gemini in Sheets flagged [Merchant Name] for a low CVR today.
+Cross-reference the 'Daily Performance Monitor' with the 'Promo Planner'. 
+What promotion was supposed to be live for them today?</code></pre>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
