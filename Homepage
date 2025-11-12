@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales AI Solution Hub</title>
+    <!-- 1. Load Pre-compiled Tailwind CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <!-- 2. Load Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- 3. Custom Styles -->
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f8fafc; /* slate-50 */ 
+            color: #1e293b; /* slate-800 */
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <div id="app" class="container mx-auto px-4 py-12 max-w-6xl">
+        
+        <!-- === HEADER === -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-indigo-600 mb-3">Sales AI Solution Hub</h1>
+            <p class="text-xl text-slate-600">Find instant AI solutions for your daily sales tasks.</p>
+        </header>
+
+        <!-- === SEARCH BAR (Placeholder) === -->
+        <div class="relative mb-12 max-w-2xl mx-auto">
+            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                <svg class="h-5 w-5 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+            </div>
+            <input 
+                type="text" 
+                placeholder="Search for a solution (e.g., 'QBR', 'Banners', 'Upsell')..." 
+                disabled 
+                class="w-full h-14 pl-12 pr-4 py-3 bg-white border border-slate-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-not-allowed"
+            >
+            <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-100 text-slate-500">
+                    Coming Soon
+                </span>
+            </div>
+        </div>
+
+        <!-- === CATEGORY CARDS === -->
+        <div>
+            <h2 class="text-2xl font-semibold mb-6 text-center text-slate-700">Browse by Category</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Card 1: Super Easy Wins -->
+                <a href="category-0.html" class="group block p-6 bg-white border border-slate-200 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full flex flex-col justify-between">
+                    <div>
+                        <div class="mb-4">
+                            <span class="inline-flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-700">
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 15l.813-.904m-2.828 0L6.187 15l.813.904m2.828-2.828L9 12l.813-.904m-2.828 0L6.187 12l.813.904m2.828 2.828l1.096 1.096c.39.39 1.024.39 1.414 0l.813-.813m-4.242 0l.813.813a.996.996 0 001.414 0l.813-.813m-2.828 0l1.096-1.096c.39.39 1.024.39 1.414 0l.813.813m0-4.242l.813-.813a.996.996 0 000-1.414l-.813-.813m0 2.828l-.813.813a.996.996 0 000 1.414l.813.813m0-2.828l-.813.813a.996.996 0 000 1.414l.813.813M12 6.096l.813-.813a.996.996 0 011.414 0l.813.813M12 6.096l-.813.813a.996.996 0 000 1.414l.813.813m-2.828 0l-.813-.813a.996.996 0 00-1.414 0l-.813.813m2.828 0l.813.813a.996.996 0 010 1.414l-.813.813" />
+                                </svg>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">Super Easy Wins</h3>
+                        <p class="text-slate-500 mb-4">60-second tasks that show the power of AI right now.</p>
+                    </div>
+                    <span class="font-medium text-green-600 group-hover:text-green-700 mt-2">View Solutions &rarr;</span>
+                </a>
+
+                <!-- Card 2: Quick Wins -->
+                <a href="category-1.html" class="group block p-6 bg-white border border-slate-200 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full flex flex-col justify-between">
+                    <div>
+                        <div class="mb-4">
+                            <span class="inline-flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-700">
+                                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                                </svg>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">Phase 1: Quick Wins</h3>
+                        <p class="text-slate-500 mb-4">Solve high-effort "checking" and monitoring tasks in minutes.</p>
+                    </div>
+                    <span class="font-medium text-blue-600 group-hover:text-blue-700 mt-2">View Solutions &rarr;</span>
+                </a>
+
+                <!-- Card 3: Workflow Automation -->
+                <a href="category-2.html" class="group block p-6 bg-white border border-slate-200 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full flex flex-col justify-between">
+                    <div>
+                        <div class="mb-4">
+                            <span class="inline-flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-700">
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
+                                </svg>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">Phase 2: Automation</h3>
+                        <p class="text-slate-500 mb-4">Automate reports, sync data, and stop manual copy-pasting.</p>
+                    </div>
+                    <span class="font-medium text-indigo-600 group-hover:text-indigo-700 mt-2">View Solutions &rarr;</span>
+                </a>
+                
+                <!-- Card 4: Advanced Strategy -->
+                <a href="category-3.html" class="group block p-6 bg-white border border-slate-200 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full flex flex-col justify-between">
+                    <div>
+                        <div class="mb-4">
+                            <span class="inline-flex items-center justify-center h-12 w-12 rounded-full bg-purple-100 text-purple-700">
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.211 1.004l-1.5 2.25h8.918l-1.5-2.25a2.25 2.25 0 01-.211-1.004V3.104M9.75 3.104c0-.39.31-.7.7-1.382l.01-.018a1.5 1.5 0 012.3 0l.01.018c.38.68.69 1.28.69 1.382m-3.018 0h3.018M12 15.75v5.25m-3.375-5.25h6.75" />
+                                </svg>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-800 mb-2">Phase 3: Advanced AI</h3>
+                        <p class="text-slate-500 mb-4">Build upsell engines, generative AI tools, and predictive models.</p>
+                    </div>
+                    <span class="font-medium text-purple-600 group-hover:text-purple-700 mt-2">View Solutions &rarr;</span>
+                </a>
+
+            </div>
+        </div>
+    </div> <!-- End of #app container -->
+
+</body>
+</html>
