@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 2: Automation - Sales AI Hub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
+    </style>
+</head>
+<body class="text-slate-800">
+    <div id="app" class="container mx-auto px-4 py-12 max-w-6xl">
+        <p class="mb-4 text-sm text-slate-500">
+            <a href="index.html" class="text-indigo-600 hover:underline">Home</a> &gt; 
+            <span>Phase 2: Workflow Automation</span>
+        </p>
+        <header class="mb-10 flex items-center space-x-4">
+            <span class="inline-flex items-center justify-center h-16 w-16 rounded-full bg-indigo-100 text-indigo-700">
+                <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" /></svg>
+            </span>
+            <div>
+                <h1 class="text-3xl font-bold text-slate-800">Phase 2: Workflow Automation</h1>
+                <p class="text-lg text-slate-600">Automate reports, sync data, and stop manual copy-pasting.</p>
+            </div>
+        </header>
+        <div class="space-y-6">
+            <a href="solution-qbr.html" class="block p-6 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h2 class="text-xl font-semibold text-indigo-700 mb-2">How to Automate QBR (Quarterly Business Review) Creation</h2>
+                <p class="text-slate-600 mb-3">Turn hours of manual data pulling and slide creation into a 10-minute automated process.</p>
+                <span class="font-medium text-indigo-600">View Solution &rarr;</span>
+            </a>
+            <a href="solution-scheduled-ads.html" class="block p-6 bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h2 class="text-xl font-semibold text-indigo-700 mb-2">How to Automate Scheduled Ad Reporting</h2>
+                <p class="text-slate-600 mb-3">Stop manually copy-pasting from Tableau to Google Sheets. Use Gemini to format and review ad reports.</p>
+                <span class="font-medium text-indigo-600">View Solution &rarr;</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
